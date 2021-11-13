@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double x;
+	double y;
+	double z;
+
+	cout << "Average Marks and Grade Calculator\n";
+	cout << "\nPlease input the mark of the first subject:\n";
+
+	cin >> x;
+
+	cout << "\nPlease input the mark of the second subject\n";
+
+	cin >> y;
+
+	z = (x + y) / 2;
+
+	if ((z >= 70) && (z <= 100)) {
+		cout << "\nAn average of " << z << " has a grade of A\n";
+	}
+	else if ((z >= 60) && (z <= 69)) {
+		cout << "\nAn average of " << z << " has a grade of B\n";
+	}
+	else if ((z >= 50) && (z <= 59)) {
+		cout << "\nAn average of " << z << " has a grade of C\n";
+	}
+	else if ((z >= 40) && (z <= 49)) {
+		cout << "\nAn average of " << z << " has a grade of D\n";
+	}
+	else if (z < 40) {
+		cout << "\nAn average of " << z << " has a grade of F\n";
+	}
+	else {
+		cout << "\nInvalid Input of marks";
+	}
+
+	system("pause>0");
+}
