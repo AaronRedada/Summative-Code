@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    string name;
+    int num;
+    cout << "Please Enter your full name:\n";
+    getline(cin,name);
+    cout << endl;
+
+    cout << "Now enter the number you wish to print out:\n";
+    cin >> num;
+    cout << endl;
+
+    while (cin.fail()) {
+        cout << "Incorrect Input, Try Again :\n";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cin >> num;
+    }
+
+    cout << "Hello, " << name << ", Here are the results:" << endl;
+
+    cout << endl << "----- FACTORIAL -----" << endl;
+    int factorial = 1, x = 1;
+    do {
+        factorial = factorial * x;
+        x++;
+    } while (x <= num);
+    
+    cout << "The factorial of " << num << " is " << factorial << endl;
+
+    cout << endl;
+
+    cout << endl << "----- TABLE -----" << endl;
+    cout << "Here is the table for " << num << " :\n";
+    int table = 1;
+    while (table <= 10) {
+        int t = num * table;
+        cout << num << " * " << table << " = " << t << endl;
+        table++;
+    }
+
+    cout << endl;
+
+    cout << endl << "----- POWER TABLE -----" << endl;
+    cout << "Here is the power table for " << num << endl;
+    for (int power = 1; power <= 10; power++) {
+        double p = pow(num, power);
+        cout << num << " ^" << power << " = " << p << endl;
+    }
+}
